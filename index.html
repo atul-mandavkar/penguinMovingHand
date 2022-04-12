@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>animation with css only in html</title>
+    </head>
+    <body>
+        <div class="penguin">
+            <div class="upperBody">
+                <div class="leftCheek"></div>
+                <div class="rightCheek"></div>
+                <div class="leftEye">
+                    <div class="spark"></div>
+                </div>
+                <div class="rightEye">
+                    <div class="spark"></div>
+                </div>
+                <div class="beack">
+                    <div class="upperBeak"></div>
+                    <div class="lowerBeak"></div>
+                </div>
+            </div>
+            <div class="lowerBody">
+                <div class="leftArm"></div>
+                <div class="rightArm"></div>
+                <div class="leftFeet"></div>
+                <div class="rightFeet"></div>
+                <div class="belly"></div>
+            </div>
+        </div>
+        <style>
+            :root{
+                --penguin-skin: gray;
+                --penguin-belly: white;
+                --penguin-beakAndFeet: orange;
+            }
+            body{
+                background-color: antiquewhite;
+            }
+            .penguin{
+                width: 500px;
+                height: 500px;
+                margin: 5% auto;
+                position: relative;
+                border: 1px solid;
+            }
+            .penguin * {
+                position: absolute;
+            }
+            .upperBody{
+                width: 40%;
+                height: 45%;
+                border-radius: 60% 60% 70% 70%;
+                background-color: var(--penguin-skin, gray);
+                top: 5%;
+                left: 30%;
+            }
+            .lowerBody{
+                width: 50%;
+                height: 50%;
+                border-radius: 60% 60% 70% 70%;
+                background-color: var(--penguin-skin);
+                top: 35%;
+                left: 25%;
+            }
+            .leftArm{
+                width: 25%;
+                height: 55%;
+                border-radius: 50% 65% 80% 105%;
+                background-color: var(--penguin-skin);
+                top: 10%;
+                left: -10%;
+                transform: rotate(45deg);
+            }
+            .rightArm{
+                width: 25%;
+                height: 55%;
+                border-radius: 65% 50% 105% 80%;
+                background-color: var(--penguin-skin);
+                top: 10%;
+                left: 85%;
+                transform: rotate(-45deg);
+            }
+            .leftFeet{
+                width: 20%;
+                height: 15%;
+                border-radius: 40% 40% 60% 60%;
+                background-color: var(--penguin-beakAndFeet);
+                top: 95%;
+                left: 25%;
+                z-index: -1;
+            }
+            .rightFeet{
+                width: 20%;
+                height: 15%;
+                border-radius: 40% 40% 60% 60%;
+                background-color: var(--penguin-beakAndFeet);
+                top: 95%;
+                left: 55%;
+                z-index: -1;
+            }
+        </style>
+    </body>
+</html>
