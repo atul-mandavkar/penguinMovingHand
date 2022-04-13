@@ -36,12 +36,12 @@
             body{
                 background-color: antiquewhite;
             }
-            .penguin{
+            .penguin{   
                 width: 500px;
                 height: 500px;
                 margin: 5% auto;
                 position: relative;
-                border: 1px solid;
+                transform: scale(0.5);
             }
             .penguin * {
                 position: absolute;
@@ -51,9 +51,74 @@
                 height: 45%;
                 border-radius: 60% 60% 70% 70%;
                 background-color: var(--penguin-skin, gray);
-                top: 5%;
+                top: 10%;
                 left: 30%;
+                z-index: 1;
             }
+            .leftCheek{
+                width: 60%;
+                height: 100%;
+                border-radius: 60% 60% 70% 70%;
+                background-color: var(--penguin-belly, white);
+                top: 10%;
+                left: 5%;
+            }
+            .rightCheek{
+                width: 60%;
+                height: 100%;
+                border-radius: 60% 60% 70% 70%;
+                background-color: var(--penguin-belly, white);
+                top: 10%;
+                left: 35%;
+            }
+            .leftEye{
+                width: 15%;
+                height: 20%;
+                border-radius: 60% 60%;
+                background-color: black;
+                top: 25%;
+                left: 20%;
+            }
+            .rightEye{
+                width: 15%;
+                height: 20%;
+                border-radius: 60% 60%;
+                background-color: black;
+                top: 25%;
+                left: 60%;
+            }
+            .spark{
+                width: 30%;
+                height: 30%;
+                border-radius: 50%;
+                background-color: whitesmoke;
+                top: 30%;
+                left: 30%
+            }
+            .beack{
+                width: 15%;
+                height: 20%;
+                border-radius: 50%;
+                top: 40%;
+                left: 40%;
+            }
+            .upperBeak{
+                width: 140%;
+                height: 40%;
+                border-radius: 60% 60% 80% 80%;
+                background-color: var(--penguin-beakAndFeet, orange);
+                top: 10%;
+                left: -20%;
+            }
+            .lowerBeak{
+                width: 100%;
+                height: 30%;
+                border-radius: 60% 60% 80% 80%;
+                background-color: var(--penguin-beakAndFeet, orange);
+                top: 35%;
+                left: -3%;
+            }
+
             .lowerBody{
                 width: 50%;
                 height: 50%;
@@ -63,22 +128,44 @@
                 left: 25%;
             }
             .leftArm{
-                width: 25%;
+                width: 23%;
                 height: 55%;
                 border-radius: 50% 65% 80% 105%;
                 background-color: var(--penguin-skin);
-                top: 10%;
-                left: -10%;
+                top: 12%;
+                left: 12%;
                 transform: rotate(45deg);
+                z-index: -1;
+                animation: wave 3s linear 3s infinite;
+                transform-origin: 10% 0%;
             }
+            @keyframes wave {
+                10%{
+                    transform: rotate(60deg);
+                }
+                30%{
+                    transform: rotate(100deg);
+                }
+                50%{
+                    transform: rotate(50deg);
+                }
+                70%{
+                    transform: rotate(100deg);
+                }
+                90%{
+                    transform: rotate(45deg);
+                }
+            }
+            
             .rightArm{
-                width: 25%;
+                width: 23%;
                 height: 55%;
                 border-radius: 65% 50% 105% 80%;
                 background-color: var(--penguin-skin);
-                top: 10%;
+                top: 8%;
                 left: 85%;
                 transform: rotate(-45deg);
+                z-index: -1;
             }
             .leftFeet{
                 width: 20%;
@@ -97,6 +184,14 @@
                 top: 95%;
                 left: 55%;
                 z-index: -1;
+            }
+            .belly{
+                width: 90%;
+                height: 95%;
+                border-radius: 50%;
+                background-color: var(--penguin-belly, white);
+                top: 3%;
+                left: 5%;
             }
         </style>
     </body>
