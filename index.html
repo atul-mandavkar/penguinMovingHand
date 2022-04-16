@@ -39,8 +39,8 @@
             .penguin{   
                 width: 500px;
                 height: 500px;
-                margin: 5% auto;
                 position: relative;
+                top: 0;
                 transform: scale(0.5);
             }
             .penguin * {
@@ -78,6 +78,15 @@
                 background-color: black;
                 top: 25%;
                 left: 20%;
+                animation: wink 2s linear 3s;
+            }
+            @keyframes wink {
+                5%{
+                   opacity: 0;
+                }
+                10%{
+                    opacity: 1;
+                }
             }
             .rightEye{
                 width: 15%;
@@ -136,24 +145,39 @@
                 left: 12%;
                 transform: rotate(45deg);
                 z-index: -1;
-                animation: wave 3s linear 3s infinite;
+                animation-name: wave;
+                animation-duration: 2s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 3s;
                 transform-origin: 10% 0%;
             }
             @keyframes wave {
                 10%{
                     transform: rotate(60deg);
                 }
+                20%{
+                    transform: rotate(100deg);
+                }
                 30%{
+                    transform: rotate(50deg);
+                }
+                40%{
                     transform: rotate(100deg);
                 }
                 50%{
-                    transform: rotate(50deg);
+                    transform: rotate(45deg);
+                }
+                60%{
+                    transform: rotate(60deg);
                 }
                 70%{
                     transform: rotate(100deg);
                 }
+                80%{
+                    transform: rotate(50deg);
+                }
                 90%{
-                    transform: rotate(45deg);
+                    transform: rotate(100deg);
                 }
             }
             
